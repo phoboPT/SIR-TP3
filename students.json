@@ -1,0 +1,67 @@
+{
+  "students": [
+    {
+      "name": "Hugo Cardoso",
+      "age": 29,
+      "description": "He is a good",
+      "gitHub": "phoboPT",
+      "image": "image1.jpg",
+      "marks": [
+        {
+          "subject": "maths",
+          "marks": 80
+        },
+        {
+          "subject": "science",
+          "marks": 90
+        },
+        {
+          "subject": "social",
+          "marks": 70
+        }
+      ]
+    },
+    {
+      "name": "Marcos Costa",
+      "age": 22,
+      "description": "He is a good",
+      "gitHub": "Yusufaky",
+      "image": "image2.jpg",
+      "marks": [
+        {
+          "subject": "maths",
+          "marks": 80
+        },
+        {
+          "subject": "science",
+          "marks": 90
+        },
+        {
+          "subject": "social",
+          "marks": 70
+        }
+      ]
+    },
+    {
+      "name": "Ricardo Dias",
+      "age": 23,
+      "description": "He is a good",
+      "gitHub": "rycardodias",
+      "image": "image3.jpg",
+      "marks": [
+        {
+          "subject": "maths",
+          "marks": 80
+        },
+        {
+          "subject": "science",
+          "marks": 90
+        },
+        {
+          "subject": "social",
+          "marks": 70
+        }
+      ]
+    }
+  ]
+}
