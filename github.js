@@ -1,9 +1,21 @@
 class GitHub {
   constructor() {
-    this.client_id = "d83181e28385ed231d07";
-    this.client_secret = "fce8c03dffe1ad5ec2cbca80617a1f157e7138a3";
+    this.client_id;
+    this.client_secret;
     this.repos_count = 5;
     this.repos_sort = "created: asc";
+    fetch("./test.json", {
+      method: "GET",
+      headers: {
+        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        this.client_id = data.id;
+        this.client_secret = data.secret;
+      })
+      .catch((error) => console.log(error));
   }
 
   async getUser(user) {

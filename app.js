@@ -17,6 +17,20 @@ fetch("./students.json", {
     ui.showStudent(data);
   })
   .catch((error) => console.log(error));
+
+const aboutMe = () => {
+  fetch("./me.json", {
+    method: "GET",
+    headers: {
+      "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      ui.showMe(data);
+    })
+    .catch((error) => console.log(error));
+};
 //Init ui
 //search input
 

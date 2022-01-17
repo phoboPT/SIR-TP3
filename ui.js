@@ -169,4 +169,14 @@ class UI {
   clearProfile() {
     this.profile.innerHTML = "";
   }
+
+  showMe(data) {
+    this.clearProfile();
+    this.students.innerHTML = `<div class="jumbotron">
+    <h3 class="display-4">Hello!</h3>
+    <p class="lead">${data.name}</p>
+    <hr class="my-4">
+    <p>Email: ${data.email}</p>
+    <p>`;
+  }
 }
