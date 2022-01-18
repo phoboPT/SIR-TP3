@@ -4,22 +4,15 @@ class UI {
     this.students = document.getElementById("students");
   }
 
-  async shortener(url) {
-    const data = await fetch(` https://api.shrtco.de/v2/shorten?url=${url}`);
-    const dataJson = await data.json();
-
-    return dataJson;
-  }
-
   async showProfile(user) {
     this.clearProfile();
-    // const url = await this.shortener(user.html_url);
+    console.log(user);
     this.profile.innerHTML = `
         <div class="card card-body">
             <div class="row">
                 <div class="col-md-3">
                     <img class="img-fluid mb-2" src="${user.avatar_url}">
-                    <a href="${user.url}" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
+                    <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
                 </div>
                 <div class="col-md-9" >                
                     <span class="badge badge-primary" style="color:black">Public Repos: ${user.public_repos}</span>
@@ -118,7 +111,7 @@ class UI {
     <p>Participants: ${data.participants}</p>
     <p>Price: ${data.price}</p>
     <p>Link: ${data.link}</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  
   </div>`;
   }
   showJoke(data) {
@@ -139,7 +132,7 @@ class UI {
     <p>Type: ${data.type}</p>
     <p>Category: ${data.category}</p>
     
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  
   </div>`;
   }
 
@@ -173,10 +166,16 @@ class UI {
   showMe(data) {
     this.clearProfile();
     this.students.innerHTML = `<div class="jumbotron">
-    <h3 class="display-4">Hello!</h3>
-    <p class="lead">${data.name}</p>
+    <h3 class="display-4">Hello ${data.name}!</h3>
     <hr class="my-4">
+    <img src="./img/me.jpg" class="img-fluid" alt="text" width="200"heigth="200">
+    <p>Bio: ${data.bio}</p>
     <p>Email: ${data.email}</p>
+    <p> ${data.langs}</p>
+
+    <p><img align="left" src="${data.mostUsed}" alt="phobopt" /></p>
+<p>&nbsp;<img align="center" src="${data.stats}" alt="phobopt" /></p>
+<p><img align="center" src="${data.streaks}" alt="phobopt" /></p>
     <p>`;
   }
 }

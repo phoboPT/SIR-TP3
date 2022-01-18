@@ -2,7 +2,7 @@ class GitHub {
   constructor() {
     this.client_id;
     this.client_secret;
-    this.repos_count = 5;
+    this.repos_count = 20;
     this.repos_sort = "created: asc";
     fetch("./test.json", {
       method: "GET",
